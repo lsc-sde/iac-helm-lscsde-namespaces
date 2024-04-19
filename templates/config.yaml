@@ -1,0 +1,16 @@
+{{ range $key, $val := .Values.components }}
+{{ if eq $val.state "enabled" }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ printf "nscfg-%s%s" $key $.Values.naming.suffix | replace "_" "-" }}
+data:
+  name: {{ printf "%s%s" $val.namespace $.Values.naming.suffix }}
+  {{ if hasKey $val "injectCertificates" }}
+  inject_jupyter_certificates: "{{ $val.injectCertificates }}"
+  {{ else }}
+  inject_jupyter_certificates: "false"
+  {{ end }}
+---
+{{ end }}
+{{ end }}

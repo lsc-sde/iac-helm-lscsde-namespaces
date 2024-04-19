@@ -1,0 +1,11 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: {{ printf "lscsde-namespace%s" $.Values.naming.suffix }}
+spec:
+  interval: 1m0s
+  ref:
+    branch: {{ .Values.repository.branch }}
+  timeout: 60s
+  url: {{ .Values.repository.url }}
+---

@@ -1,6 +1,10 @@
 naming:
   suffix: ""
 
+repository:
+  url: https://github.com/lsc-sde/iac-flux-lscsde-namespaces
+  branch: main
+
 components:
   aks_dns:
     state: "enabled"
