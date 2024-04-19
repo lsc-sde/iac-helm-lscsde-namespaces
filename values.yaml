@@ -1,0 +1,44 @@
+naming:
+  suffix: ""
+
+components:
+  aks_dns:
+    state: "enabled"
+    namespace: "aks-dns-operator"
+  analytics_workspace_management:
+    state: "enabled"
+    namespace: lscsde-workspace-mgr
+    injectCertificates: true
+  cert_manager:
+    state: "enabled"
+    namespace: cert-manager
+  trust_manager:
+    state: "enabled"
+    namespace: cert-manager
+  github_runner:
+    state: "disabled"
+    namespace: github-runner
+  ingress_nginx:
+    state: "enabled"
+    namespace: nginx
+  jupyter_hub:
+    state: "enabled"
+    namespace: jupyterhub
+    injectCertificates: true
+  keda:
+    state: "enabled"
+    namespace: keda
+  metrics_server:
+    state: "enabled"
+    namespace: metrics-server
+  ohdsi:
+    state: "enabled"
+    namespace: ohdsi
+    injectCertificates: true
+  secrets_distributor:
+    state: "enabled"
+    namespace: secrets-distributor
+  guacamole:
+    state: "disabled"
+    namespace: guacamole
+    injectCertificates: true

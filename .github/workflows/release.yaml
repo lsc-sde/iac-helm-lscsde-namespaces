@@ -1,0 +1,18 @@
+name: Deploy new Helm Package
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    - 'main'
+
+jobs:
+  release:
+    uses: lsc-sde/lsc-sde/.github/workflows/helm-release.yaml@main
+    with:
+      directory: iac/helm/lscsde-namespaces
+      yamlFilePath: "core/release-namespaces.yaml"
+      yamlPathPrefix: ".spec.chart.spec."
+      yamlPath: "version"
+      yamlPathSuffix: ""
+    secrets: inherit

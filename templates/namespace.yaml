@@ -1,0 +1,19 @@
+{{ range .Values.components }}
+{{ if eq .state "enabled" }}
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    kustomize.toolkit.fluxcd.io/prune: disabled
+    helm.sh/resource-policy: keep
+  labels:
+    kubernetes.io/metadata.name: {{ printf "%s%s" .namespace $.Values.naming.suffix }}
+
+    {{ if hasKey . "injectCertificates"  }}
+    {{ if .injectCertificates }}
+    lsc-sde.io/injectJupyterCertificates: "true"
+    {{ end }}
+    {{ end }}
+  name: test
+{{ end }}
+{{ end }}
