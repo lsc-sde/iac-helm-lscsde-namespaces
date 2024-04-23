@@ -1,7 +1,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
-  name: {{ printf "lscsde-namespace%s" $.Values.naming.suffix }}
+  name: {{ printf "lscsde-namespace%s" $.Values.naming.namespaceSuffix }}
 spec:
   interval: 1m0s
   ref:
