@@ -3,9 +3,9 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ printf "nscfg-%s%s" $key $.Values.naming.namespaceSuffix | replace "_" "-" }}
+  name: {{ printf "nscfg-%s%s" $key $.Values.naming.suffix | replace "_" "-" }}
 data:
-  name: {{ printf "%s%s" $val.namespace $.Values.naming.suffix }}
+  name: {{ $val.namespace }} 
   {{ if hasKey $val "injectCertificates" }}
   inject_jupyter_certificates: "{{ $val.injectCertificates }}"
   {{ else }}
