@@ -46,3 +46,7 @@ components:
     state: "disabled"
     namespace: guacamole
     injectCertificates: true
+  workspace_definitions:
+    state: "enabled"
+    namespace: workspace-definitions
+    injectCertificates: false
