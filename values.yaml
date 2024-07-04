@@ -53,4 +53,4 @@ components:
   superset:
     state: "enabled"
     namespace: superset
-    injectCertificates: false
+    injectCertificates: true
