@@ -50,3 +50,7 @@ components:
     state: "enabled"
     namespace: workspace-definitions
     injectCertificates: false
+  superset:
+    state: "enabled"
+    namespace: superset
+    injectCertificates: false
