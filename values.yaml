@@ -54,3 +54,7 @@ components:
     state: "enabled"
     namespace: superset
     injectCertificates: true
+  rabbitmq:
+    state: "enabled"
+    namespace: rabbitmq
+    injectCertificates: true
