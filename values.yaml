@@ -58,3 +58,7 @@ components:
     state: "enabled"
     namespace: rabbitmq
     injectCertificates: true
+  observability_metrics:
+    state: "enabled"
+    namespace: observability-metrics
+    injectCertificates: true
