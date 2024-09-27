@@ -46,6 +46,10 @@ components:
     state: "disabled"
     namespace: guacamole
     injectCertificates: true
+  keycloak:
+    state: "enabled"
+    namespace: keycloak
+    injectCertificates: true
   workspace_definitions:
     state: "enabled"
     namespace: workspace-definitions
