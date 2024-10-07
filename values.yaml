@@ -66,3 +66,7 @@ components:
     state: "enabled"
     namespace: observability-metrics
     injectCertificates: true
+  awms_guacamole:
+    state: "enabled"
+    namespace: awms-guacamole
+    injectCertificates: true
