@@ -70,3 +70,7 @@ components:
     state: "enabled"
     namespace: awms-guacamole
     injectCertificates: true
+  awms_crate:
+    state: "enabled"
+    namespace: awms-crate
+    injectCertificates: true
