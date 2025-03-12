@@ -78,3 +78,8 @@ components:
     state: "enabled"
     namespace: neulander
     injectCertificates: true
+  cr8tor_publisher:
+    state: "enabled"
+    namespace: cr8tor-publisher
+    injectCertificates: true
+  
