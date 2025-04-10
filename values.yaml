@@ -82,4 +82,7 @@ components:
     state: "enabled"
     namespace: cr8tor-publisher
     injectCertificates: true
-  
+  tobiko:
+    state: "enabled"
+    namespace: tobiko
+    injectCertificates: true
