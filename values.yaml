@@ -33,7 +33,7 @@ components:
     state: "enabled"
     namespace: keda
   metrics_server:
-    state: "enabled"
+    state: "disabled"
     namespace: metrics-server
   ohdsi:
     state: "disabled"
