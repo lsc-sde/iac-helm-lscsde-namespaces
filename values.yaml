@@ -55,7 +55,7 @@ components:
     namespace: workspace-definitions
     injectCertificates: false
   superset:
-    state: "enabled"
+    state: "disabled"
     namespace: superset
     injectCertificates: true
   rabbitmq:
